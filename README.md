@@ -9,3 +9,9 @@
 Центр Google поиска
 </p>
 </a>
+
+<a href='https://fonts.google.com/'>
+<p>
+Шрифты
+</p>
+</a>
