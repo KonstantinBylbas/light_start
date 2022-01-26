@@ -1,10 +1,12 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
 *,
 *::before,
 *::after {
   color: #252525;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 a,
@@ -105,6 +107,16 @@ button {
   }
 }
 
+.container {
+  width: 1200px;
+  margin: auto;
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
 .row {
   display: flex;
 }
@@ -112,14 +124,6 @@ button {
 .column {
   display: flex;
   flex-direction: column;
-}
-
-.between {
-  justify-content: space-between;
-}
-
-.center {
-  justify-content: center;
 }
 
 ::-webkit-scrollbar {
@@ -130,7 +134,7 @@ button {
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-  background-color: cyan;
+  background-color: grey;
   border-radius: 9em;
   transition: all 0.4s;
 }
@@ -142,22 +146,22 @@ button {
 /* Стрелки */
 ::-webkit-scrollbar-button:vertical:start:decrement {
   background: linear-gradient(120deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(240deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(0deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
-  background-color: cyan;
+  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
   background: linear-gradient(300deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(60deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(180deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
-  background-color: cyan;
+  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
   background: linear-gradient(30deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
-  background-color: cyan;
+  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment {
   background: linear-gradient(210deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
-  background-color: cyan;
+  background-color: grey;
 }
 
 input::-webkit-outer-spin-button,

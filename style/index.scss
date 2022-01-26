@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
 $dark: #252525;
 $light: #eee;
 
@@ -7,6 +9,7 @@ $light: #eee;
     color: $dark;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
 }
 
 a,
@@ -79,6 +82,14 @@ button {
     }
 }
 
+.container{
+    width: 1200px;
+    margin: auto;
+    @media only screen and(max-width: 1200px) {
+        width: 95%;
+    }
+}
+
 //******************flex******************
 .row {
     display: flex;
@@ -87,14 +98,6 @@ button {
 .column {
     display: flex;
     flex-direction: column;
-}
-
-.between {
-    justify-content: space-between;
-}
-
-.center {
-    justify-content: center;
 }
 
 //******************custom scrollBar******************
@@ -106,7 +109,7 @@ button {
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-    background-color: cyan;
+    background-color: grey;
     border-radius: 9em;
     transition: all 0.4s;
 }
@@ -120,28 +123,28 @@ button {
     background: linear-gradient(120deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(240deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(0deg, $light 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: cyan;
+    background-color: grey;
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
     background: linear-gradient(300deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(60deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(180deg, $light 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: cyan;
+    background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
     background: linear-gradient(30deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(150deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(270deg, $light 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: cyan;
+    background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment {
     background: linear-gradient(210deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(330deg, $light 40%, rgba(0, 0, 0, 0) 41%),
         linear-gradient(90deg, $light 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: cyan;
+    background-color: grey;
 }
 
 //******************hide browser input buttons******************
