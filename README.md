@@ -15,3 +15,9 @@
 Шрифты
 </p>
 </a>
+
+<a href='https://netpeak.net/ru/blog/kak-optimizirovat-spa-sayty/'>
+<p>
+SPA SEO оптимизация
+</p>
+</a>
