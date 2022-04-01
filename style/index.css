@@ -107,8 +107,13 @@ button {
   }
 }
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .container {
-  width: 1200px;
+  width: 1100px;
   margin: auto;
 }
 @media only screen and (max-width: 1200px) {
@@ -127,41 +132,45 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
   background-color: #eee;
+  /* ползунок скроллбара */
 }
-
-/* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-  background-color: grey;
-  border-radius: 9em;
-  transition: all 0.4s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #252525;
+  border-radius: 0.2rem;
 }
 
 /* Стрелки */
 ::-webkit-scrollbar-button:vertical:start:decrement {
   background: linear-gradient(120deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(240deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(0deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
-  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
   background: linear-gradient(300deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(60deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(180deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
-  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
   background: linear-gradient(30deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
-  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment {
   background: linear-gradient(210deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #eee 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #eee 30%, rgba(0, 0, 0, 0) 31%);
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment {
   background-color: grey;
+}
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-button:vertical:end:increment:hover,
+::-webkit-scrollbar-button:vertical:start:decrement:hover,
+::-webkit-scrollbar-button:horizontal:start:decrement:hover,
+::-webkit-scrollbar-button:horizontal:end:increment:hover {
+  background-color: #252525;
 }
 
 input::-webkit-outer-spin-button,
@@ -182,13 +191,11 @@ input[type=checkbox] {
   display: none;
   cursor: pointer;
 }
-
 input[type=checkbox] + label {
   position: relative;
   cursor: pointer;
 }
-
-input[type=checkbox] + label:before {
+input[type=checkbox] + label::before {
   content: "";
   margin: 0.5rem 0;
   -webkit-appearance: none;
